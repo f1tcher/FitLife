@@ -12,7 +12,7 @@ def is_number(user_input):
 
 
 # Запрашиваю имя пользователя и привожу к нижнему регистру
-user_name = input('Введите пожалуйста ваше имя: ').lower()
+user_name = input('Введите пожалуйста ваше имя: ').lower().title()
 user_age = input('А теперь возраст (числом): ')  # Запрашиваю возраст
 # И проверяю, ввёл ли пользователь число, иначе прошу ввести числом
 while not is_number(user_age):
@@ -50,7 +50,7 @@ age_suffix = ('г.' if (user_age % 10 in range(1, 5)
               else 'л.')
 
 print('-' * 15, 'Отчёт', '-' * 15)
-print(f'Пользователь: {user_name.title()} ({user_age} {age_suffix})')
+print(f'Пользователь: {user_name} ({user_age} {age_suffix})')
 print(f'Индекс Массы Тела: {bmi}')
 print(f'Рекомендуемая норма воды: {water_l} л. в день')
 print()
